@@ -1,11 +1,18 @@
 .App {
-  height: "90%";
-  width: "90%";
+  height: 90%;
+  width: 90%;
+  margin-top: 20px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.Text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -30,14 +37,6 @@
 }
 
 .Main {
-  max-height: "90vh";
-  max-width: "90vw";
-  background-color: #fff;
-}
-
-.Repo-detail {
-  height: "20vh";
-  width: "80vw";
   background-color: #282c34;
 }
 
