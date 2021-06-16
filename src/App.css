@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   height: "90%";
   width: "90%";
 }
@@ -34,6 +33,12 @@
   max-height: "90vh";
   max-width: "90vw";
   background-color: #fff;
+}
+
+.Repo-detail {
+  height: "20vh";
+  width: "80vw";
+  background-color: #282c34;
 }
 
 @keyframes App-logo-spin {

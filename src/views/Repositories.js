@@ -2,6 +2,7 @@ import '../App.css'
 import { fetchRepos, setRepos } from '../store/action'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import RepoDetail from '../components/RepoDetail'
 
 export default function Home () {
   const dispatch = useDispatch()
@@ -23,11 +24,18 @@ export default function Home () {
     <>
       <div className="Main">
         <h1>Repo</h1>
-        <p>
+        <div>
           {
-            JSON.stringify(repositories)
+            repositories.map(repo => {
+              return <RepoDetail 
+                key={repo.id}
+                name={repo.name}
+                owner={repo.owner.login}
+                lang={repo.language}
+              />
+            })
           }
-        </p>
+        </div>
       </div>
     </>
   )
