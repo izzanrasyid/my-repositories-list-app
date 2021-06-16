@@ -8,7 +8,7 @@ function reposReducer (state = initialState, action) {
   const { type, payload } = action
   switch (type) {
     case SET_REPOS:
-      return { ...state, repositories: state.repositories.concat(payload) }
+      return { ...state, repositories: payload }
     default:
       return state
   }

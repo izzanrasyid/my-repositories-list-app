@@ -3,12 +3,39 @@
 .App {
   height: 90%;
   width: 90%;
-  margin-top: 20px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.Navbar {
+  height: 50px;
+  width: 100%;
+  border-bottom: #fff;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.Link-title {
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: large;
+  transition: 20ms;
+  color: #f5f5dc;
+}
+
+.Text-home {
+  color: #fff;
+}
+
+.Link-title:hover {
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: large;
+  transition: 20ms;
+  color: gray;
 }
 
 .Text-center {

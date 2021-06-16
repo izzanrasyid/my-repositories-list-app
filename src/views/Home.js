@@ -1,5 +1,5 @@
 import '../App.css'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { fetchRepos, setRepos } from '../store/action'
@@ -11,11 +11,15 @@ export default function Home () {
   const history = useHistory()
   const dispatch = useDispatch()
 
+  useEffect(() => {
+    console.log(userInput, 'Did Mounted')
+  }, [])
+
   function searchRepo (e) {
     e.preventDefault()
-    console.log('masuuuukkkkk')
-    if (userInput.username !== '') {
-      console.log(userInput, '<<<<<<<')
+    if (userInput.username === '') {
+      history.push("/")
+    } else {
       dispatch(fetchRepos(userInput))
         .then(response => response.json())
         .then(repo => {
@@ -25,15 +29,15 @@ export default function Home () {
           console.log(err)
         })
         .finally(() => {
+          setUserInput({ ...userInput, username: '' })
           history.push("/repository")
         })
-    } else {
-      history.push("/")
     }
   }
-
+  
   return (
     <div>
+      <p className="Text-home">Untuk mengetahui repository akun Github anda, silakan ketik username akun Github anda</p>
       <form onSubmit={searchRepo}>
         <div className="input-group mb-3">
           <div className="input-group-prepend">
