@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import reposReducer from './reducers/repository'
 
 const reducer = combineReducers({
-    reposReducer
+  reposReducer
 })
 const store = createStore(reducer, applyMiddleware(thunk))
 

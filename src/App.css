@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: "90%";
+  width: "90%";
 }
 
 .App-logo {
@@ -26,6 +28,12 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Main {
+  max-height: "90vh";
+  max-width: "90vw";
+  background-color: #fff;
 }
 
 @keyframes App-logo-spin {
