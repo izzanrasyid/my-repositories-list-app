@@ -13,7 +13,7 @@ export default function Home () {
 
   useEffect(() => {
     console.log(userInput, 'Did Mounted')
-  }, [])
+  }, [userInput])
 
   function searchRepo (e) {
     e.preventDefault()

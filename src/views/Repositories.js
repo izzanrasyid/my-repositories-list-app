@@ -1,29 +1,15 @@
 import '../App.css'
-import { fetchRepos, setRepos } from '../store/action'
 import React, { useEffect, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import RepoDetail from '../components/RepoDetail'
 
 export default function Home () {
-  const dispatch = useDispatch()
   const repositories = useSelector(state => state.reposReducer.repositories)
   const [owner, setOwner] = useState(repositories[0].owner.login)
 
-  // useEffect(() => {
-  //   dispatch(fetchRepos())
-  //     .then(response => response.json())
-  //     .then(repo => {
-  //       dispatch(setRepos(repo))
-  //       setOwner(repo[0].owner.login)
-  //     })
-  //     .catch(err => {
-  //       console.log(err)
-  //     })
-  // }, [dispatch])
-
   useEffect(() => {
     console.log('Did mounted')
-  })
+  }, [])
 
   return (
     <>
