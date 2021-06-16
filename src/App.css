@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
 .App {
   height: 90%;
   width: 90%;
@@ -38,6 +40,28 @@
 
 .Main {
   background-color: #282c34;
+}
+
+.Title-Repository {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.Font-style-user {
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.Font-style-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+}
+
+.Font-style-lang {
+  font-family: 'Roboto', sans-serif;
+  font-size: smaller;
 }
 
 @keyframes App-logo-spin {
