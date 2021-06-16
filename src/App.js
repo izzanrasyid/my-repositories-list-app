@@ -6,14 +6,18 @@ import {
   Route
 } from "react-router-dom"
 import Repositories from './views/Repositories'
+import Home from './views/Home'
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path='/'>
+          <Route path='/repository'>
             <Repositories />
+          </Route>
+          <Route path='/'>
+            <Home />
           </Route>
         </Switch>
       </Router>

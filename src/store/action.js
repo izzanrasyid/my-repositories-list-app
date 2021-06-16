@@ -1,8 +1,9 @@
 export const SET_REPOS = 'repos/setRepos'
 
-export function fetchRepos () {
+export function fetchRepos (payload) {
   return function (dispatch) {
-    return fetch('https://api.github.com/users/VERCEL/repos')
+    const username = payload.username.toUpperCase()
+    return fetch(`https://api.github.com/users/${username}/repos`)
   }
 }
 
